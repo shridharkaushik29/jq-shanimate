@@ -1,0 +1,26 @@
+{
+  "name": "jq-shanimate",
+  "main": "jq-shanimate.js",
+  "authors": [
+    "shridharkaushik29 <shridharkaushik29@gmail.com>"
+  ],
+  "description": "An animation library to animate elements when hiding or removing",
+  "keywords": [
+    "jq-animate",
+    "animate-elements",
+    "animate-hiding-elements"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "animate.css": "^3.5.2"
+  }
+}
