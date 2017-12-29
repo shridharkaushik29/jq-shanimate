@@ -9,7 +9,6 @@
         setTimeout(function () {
             element.remove();
         }, duration * 1000)
-//        originalRemove;
     }
 
 })(jQuery)
