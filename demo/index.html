@@ -15,13 +15,49 @@ and open the template in the editor.
 
     </head>
     <body>
-        <div id="parent">
-
+        <div>
+            <h1 id="name1">Shridhar</h1>
+            <h1>Kaushik</h1>
+            <h1 id="name2" style="visibility: hidden">Shridhar</h1>
         </div>
-        <button class="animated slideInDown" onclick="add()">Add</button>
+        <!--        <div id="parent">
+
+                </div>
+                <button class="animated slideInDown" onclick="add()">Add</button>-->
     </body>
 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .move{
+            transition: 1s ease;
+        }
+    </style>
+
     <script>
+
+//        $('#name1').click(function () {
+        $('#name1').animateAnchor({
+            target: "#name2",
+            movingClass: "move",
+            onComplete: function () {
+                $("#name2").css("visibility", "visible");
+            }
+        });
+//        })
+
+        $('#name2').click(function () {
+            $(this).animateAnchor({
+                target: "#name1",
+                movingClass: "move",
+                onComplete: function () {
+                    $("#name1").css("visibility", "visible");
+                }
+            });
+        })
 
         function add() {
             var element = `<h1 class="animated fadeIn" onclick="remove(this)">Shridhar Kaushik</h1>`
@@ -29,7 +65,7 @@ and open the template in the editor.
         }
 
         function remove(element) {
-            $(element).shremove("fadeOutUp");
+            $(element).shhide("fadeOutUp");
         }
 
     </script>
